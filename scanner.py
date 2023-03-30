@@ -27,7 +27,7 @@ class ColorScanner():
     def stop(self, x: int, y: int, dx: int, dy: int) -> bool:
         return False
 
-    def scan(self) -> tuple | str:
+    def scan(self):
         if not self.callback:
             with mouse.Listener(on_click=self._scan) as listener:
                 listener.join()
